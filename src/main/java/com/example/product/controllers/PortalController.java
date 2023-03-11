@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PortalController {
 
     @GetMapping(value = "")
-    public void instructions(){
+    public String instructions(){
         System.out.println("""
         *********************************************
         System.out.println("YOU CAN GENERATE JSON IN THE FOLLOWING WEB");
@@ -39,6 +39,7 @@ public class PortalController {
                 DELETE: /products/{id} - eliminar un productoDTO por id
                 --------------------------------------------------------------------------
                 """);
+        return "instructions.html";
     }
 
 }
